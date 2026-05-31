@@ -9,7 +9,7 @@ const executeQuery =
 require("../services/dbservice");
 
 const saveHistory =
-require("../services/historyService");
+require("../services/historyservice");
 
 router.post(
     "/generate",
