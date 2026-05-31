@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Query To SQL</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="header">
+
+        <h1>
+            🤖 AI Query To SQL
+        </h1>
+
+        <p>
+            Convert Natural Language into SQL Queries
+        </p>
+
+        <button
+            id="themeBtn"
+            onclick="toggleTheme()">
+            🌙 Dark Mode
+        </button>
+
+    </div>
+
+    <div class="container">
+
+        <div class="card">
+
+            <h2>Ask Question</h2>
+
+            <textarea
+                id="question"
+                placeholder="Example:
+Show all employees
+Show employees in IT department
+Show top 3 highest paid employees">
+            </textarea>
+
+            <div class="button-group">
+
+                <button
+                    class="generate-btn"
+                    onclick="generateSQL()">
+
+                    ⚡ Generate SQL
+
+                </button>
+
+                <button
+                    class="history-btn"
+                    onclick="loadHistory()">
+
+                    📜 History
+
+                </button>
+
+                <button
+                    class="clear-btn"
+                    onclick="clearAll()">
+
+                    🗑 Clear
+
+                </button>
+
+            </div>
+
+        </div>
+
+        <div
+            id="loader"
+            class="loader">
+
+            Generating SQL...
+
+        </div>
+
+        <div class="card">
+
+            <div class="sql-header">
+
+                <h2>Generated SQL</h2>
+
+                <button
+                    onclick="copySQL()">
+
+                    📋 Copy
+
+                </button>
+
+            </div>
+
+            <pre id="sqlOutput">
+SQL query will appear here...
+            </pre>
+
+        </div>
+
+        <div class="card">
+
+            <h2>Results</h2>
+
+            <div id="tableContainer"></div>
+
+        </div>
+
+        <div
+            id="historyContainer">
+
+        </div>
+
+    </div>
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
